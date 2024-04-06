@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cafe</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, Sans-serif;
+        background-color: #0A3D62;
+    }
+
+    .logo {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar {
+        background-color: #0A3D62;
+        overflow: hidden;
+    }
+
+    .navbar a {
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .navbar a:hover {
+        background-color: #e5dacf;
+        color: black;
+    }
+
+    .navbar a.active {
+        background-color: #d1741a;
+        color: white;
+    }
+
+    .mainsection {
+        background-color: #e5dacf;
+        padding: 50px;
+        margin-top: 20px; /* Add margin to create gap between slideshow and table */
+    }
+
+    h1.mainhead {
+        color: #0A3D62;
+        background-color: #d1741a;
+        text-align: center;
+        padding: 10px;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 20px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        color: black;
+        background-color: #e5dacf;
+    }
+
+    .footer {
+        width: 100%;
+        position: relative;
+        height: auto;
+        background-color: #0A3D62;
+        color: white;
+        padding: 20px 0;
+    }
+
+    .footer .contain {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .footer .col {
+        width: 190px;
+        height: auto;
+        padding: 0px 20px 20px 20px;
+    }
+
+    .footer .col h1 {
+        margin: 0;
+        padding: 0;
+        font-family: inherit;
+        font-size: 12px;
+        line-height: 17px;
+        padding: 20px 0px 5px 0px;
+        color: rgb(138, 138, 138);
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+
+    .footer .col ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer .col ul li {
+        color: #999999;
+        font-size: 14px;
+        font-family: inherit;
+        font-weight: bold;
+        padding: 5px 0px 5px 0px;
+    }
+
+    .footer .col ul li:hover {
+        color: white;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+        margin-bottom: 20px; /* Add margin-bottom for the gap */
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+        display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+</style>
+
+<div class="logo">
+    <img src="logo.png" alt="logo of the shop" width="100%">
+</div>
+
+<nav class="navbar">
+    <a href='home.html'>Home</a>
+    <a href='about.html'>About Us</a>
+    <a href='menu.html'>Menu</a>
+    <a href='orderonline.html'>Order Online</a>
+    <a href='contact.html'>Contact Us</a>
+    <a href='ourstaff.html'>Our Staff</a>
+    <a href='gallery.html'>Gallery</a>
+    <a href='reviews.html'>Reviews</a>
+    <a href='events.html'>Events</a>
+    <a href='sustainability.html'>Sustainability</a>
+</nav>
+
+<div class="mainsection">
+    <h1 class="mainhead">Meet our team</h1>
+
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img src="sergio.jpg" alt="sergio" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <img src="claire.jpg" alt="claire" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <img src="mila.jpg" alt="mila" style="width:100%">
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <table style="width:100%">
+        <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Mr. Sergio</td>
+            <td>Head Barista</td>
+            <td>Mr Sergio has been working with us for the past 5 years. He is a veteran cook with almost 20 years of experience in the cooking business.</td>
+        </tr>
+        <tr>
+            <td>Ms. Claire</td>
+            <td>Barista</td>
+            <td>Ms. Claire is a wonderful barista from France. She learned her talents from her mother, who was also a barista. Now, she uses her family knowledge of coffee magic at HotStoppers Cafe.</td>
+        </tr>
+        <tr>
+            <td>Ms. Mila</td>
+            <td>Waitress</td>
+            <td>Ms. Mila is a waitress who has been with us since the beginning of the shop. She ensures that no customer leaves our shop unhappy.</td>
+        </tr>
+    </table>
+
+    <p>
+        "This is a project of CIS 245, Intermediate Web Publishing Course in UFV, instructed and requested by Professor Reza Abbasi."
+    </p>
+</div>
+<footer class="footer">
+    <div class="contain">
+        <div class="col">
+            <h1>Company</h1>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="sustainability.html">Sustainability</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <h1>Connect with us</h1>
+            <ul>
+                <li><a href="https://instagram.com">Instagram</a></li>
+                <li><a href="https://facebook.com">Facebook</a></li>
+                <li><a href="https://tumblr.com">Tumblr</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+</script>
+</body>
+</html>

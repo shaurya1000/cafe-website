@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cafe</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, Sans-serif;
+    background-color: #0A3D62;
+}
+
+.logo {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.navbar {
+    background-color: #0A3D62;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    background-color: #e5dacf;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #d1741a;
+    color: white;
+}
+
+.main {
+    background-color: #f2f2f2;
+    padding: 50px;
+}
+
+.form-container {
+    width: 50%;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.footer {
+    width: 100%;
+    position: relative;
+    height: auto;
+    background-color: #0A3D62;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer .contain {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer .col {
+    width: 190px;
+    height: auto;
+    padding: 0px 20px 20px 20px;
+}
+
+.footer .col h1 {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 17px;
+    padding: 20px 0px 5px 0px;
+    color: rgb(138, 138, 138);
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.footer .col ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .col ul li {
+    color: #999999;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 5px 0px 5px 0px;
+}
+
+.footer .col ul li:hover {
+    color: white;
+}
+</style>
+
+<div class="logo">
+    <img src="logo.png" alt="logo of the shop" width="100%">
+</div>
+
+<nav class="navbar">
+    <a href='home.html'>Home</a>
+    <a href='about.html'>About Us</a>
+    <a href='menu.html'>Menu</a>
+    <a href='orderonline.html'>Order Online</a>
+    <a href='contact.html'>Contact Us</a>
+    <a href='ourstaff.html'>Our Staff</a>
+    <a href='gallery.html'>Gallery</a>
+    <a href='reviews.html'>Reviews</a>
+    <a href='events.html'>Events</a>
+    <a href='sustainability.html'>Sustainability</a>
+</nav>
+
+<div class="main">
+    <div class="form-container">
+        <form action="mailto:shaurya1680@gmail.com" method="post" onsubmit="showThankYouMessage()">
+            <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" class="form-control" placeholder="Your name.." required>
+            </div>
+
+            <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" class="form-control" placeholder="Your last name.." required>
+            </div>
+
+            <div class="form-group">
+                <label for="drink">Select Drink</label>
+                <select id="drink" name="drink" class="form-control">
+                    <option value="The Iced Horchata Latte">The Iced Horchata Latte</option>
+                    <option value="Café Affogato">Café Affogato</option>
+                    <option value="Cappuccino">Cappuccino</option>
+                    <option value="Espresso">Espresso</option>
+                    <option value="Latte">Latte</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dessert">Select Dessert</label>
+                <select id="dessert" name="dessert" class="form-control">
+                    <option value="Cinnamon Crumb Cake">Cinnamon Crumb Cake</option>
+                    <option value="Lemon Ginger Blueberry Muffin">Lemon Ginger Blueberry Muffin</option>
+                    <option value="Sweethearth Rasberry Cinnamon Rolls">Sweethearth Rasberry Cinnamon Rolls</option>
+                    <option value="Mini Baked Donuts With Vanilla Glaze">Mini Baked Donuts With Vanilla Glaze</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Select Delivery Option</label>
+                <div class="radio">
+                    <label class="container">Take-out
+                        <input type="radio" name="delivery" value="Take-out" required>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Delivery
+                        <input type="radio" name="delivery" value="Delivery" required>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+
+            <input type="submit" value="Submit" class="btn btn-primary">
+        </form>
+    </div>
+
+    <p>
+        “This is a project of CIS 245 , Intermediate Web Publishing Course in UFV, Instructed and requested by Professor Reza Abbasi"
+    </p>
+</div>
+<footer class="footer">
+    <div class="contain">
+        <div class="col">
+            <h1>Company</h1>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="sustainability.html">Sustainability</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <h1>Connect with us</h1>
+            <ul>
+                <li><a href="https://instagram.com">Instagram</a></li>
+                <li><a href="https://facebook.com">Facebook</a></li>
+                <li><a href="https://tumblr.com">Tumblr</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function showThankYouMessage() {
+        alert("Thank you for ordering from HOTSTOPERS!");
+    }
+</script>
+</body>
+</html>

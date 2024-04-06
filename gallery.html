@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - HOTSTOPPERS</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, Sans-serif;
+            background-color: #0A3D62;
+        }
+
+        .logo {
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .navbar {
+            background-color: #0A3D62;
+        }
+
+        .navbar a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            background-color: #e5dacf;
+            color: black;
+        }
+
+        .navbar a.active {
+            background-color: #d1741a;
+            color: white;
+        }
+
+        .mainsection {
+            background-color: #e5dacf;
+            padding: 50px;
+        }
+
+        .footer {
+            width: 100%;
+            position: relative;
+            height: auto;
+            background-color: #0A3D62;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .footer .contain {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .footer .col {
+            width: 190px;
+            height: auto;
+            padding: 0px 20px 20px 20px;
+        }
+
+        .footer .col h1 {
+            margin: 0;
+            padding: 0;
+            font-family: inherit;
+            font-size: 12px;
+            line-height: 17px;
+            padding: 20px 0px 5px 0px;
+            color: rgb(138, 138, 138);
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+
+        .footer .col ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer .col ul li {
+            color: #999999;
+            font-size: 14px;
+            font-family: inherit;
+            font-weight: bold;
+            padding: 5px 0px 5px 0px;
+        }
+
+        .footer .col ul li:hover {
+            color: white;
+        }
+
+        .images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center; /* Center align items vertically */
+        }
+
+        .images img {
+            width: 500px; /* Set width */
+            height: 500px; /* Set height */
+            object-fit: cover; /* Ensure images cover the dimensions */
+            margin: 10px;
+        }
+
+        .head {
+            color: #0A3d62;
+            background-color: #d1741a;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="logo">
+    <img src="logo.png" alt="logo of the shop" width="100%">
+</div>
+
+<nav class="navbar">
+    <a href='home.html'>Home</a>
+    <a href='about.html'>About Us</a>
+    <a href='menu.html'>Menu</a>
+    <a href='orderonline.html'>Order Online</a>
+    <a href='contact.html'>Contact Us</a>
+    <a href='ourstaff.html'>Our Staff</a>
+    <a href='gallery.html'>Gallery</a>
+    <a href='reviews.html'>Reviews</a>
+    <a href='events.html'>Events</a>
+    <a href='sustainability.html'>Sustainability</a>
+</nav>
+
+<div class="mainsection">
+    <div class="container">
+        <h2 class="head">Gallery</h2>
+    </div>
+    <div class= "images">
+        <img src="galleryimg1.jpg" alt="coffee table">
+        <img src="galleryimg2.jpg" alt="cake and pastry">
+        <img src="galleryimg3.jpg" alt="coffee pouring in a cup">
+        <img src="galleryimg4.jpg" alt="coffee cup on a coffee machine">
+        <img src="galleryimg5.jpg" alt="coffee cup">
+        <img src="galleryimg6.jpg" alt="coffee table with a newspaper">
+    </div>
+    <p>
+        "This is a project of CIS 245, Intermediate Web Publishing Course in UFV, Instructed and requested by Professor Reza Abbasi"
+    </p>
+</div>
+<footer class="footer">
+    <div class="contain">
+        <div class="col">
+            <h1>Company</h1>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="sustainability.html">Sustainability</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <h1>Connect with us</h1>
+            <ul>
+                <li><a href="https://instagram.com">Instagram</a></li>
+                <li><a href="https://facebook.com">Facebook</a></li>
+                <li><a href="https://tumblr.com">Tumblr</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.images img');
+
+    function showImage(index) {
+        for (let i = 0; i < images.length; i++) {
+            if (i === index) {
+                images[i].style.display = 'block';
+            } else {
+                images[i].style.display = 'none';
+            }
+        }
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    }
+
+    function startSlideshow() {
+        showImage(currentIndex);
+        setInterval(nextImage, 5000); // Change image every 5 seconds
+    }
+
+    startSlideshow();
+</script>
+
+</body>
+</html>

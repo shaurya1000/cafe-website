@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, Sans-serif;
+            background-color: #0A3D62;
+        }
+
+        .navbar {
+            background-color: #0A3D62;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 23px;
+        }
+
+        .navbar a:hover {
+            background-color: #e5dacf;
+            color: black;
+        }
+
+        .navbar a.active {
+            background-color: #d1741a;
+            color: white;
+        }
+
+        .main {
+            background-color: #e5dacf;
+            padding: 20px;
+        }
+
+        h1.menu {
+            background-color: #d1741a;
+            text-align: center;
+            padding: 10px;
+            color: #0A3D62;
+        }
+
+        img.mainimg {
+            border-radius: 8px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 50%;
+            height: auto;
+            padding: 20px;
+        }
+
+        table {
+            border-spacing: 0;
+            width: 100%;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 20px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .footer {
+            width: 100%;
+            position: relative;
+            height: auto;
+            background-color: #0A3D62;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .footer .contain {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .footer .col {
+            width: 190px;
+            height: auto;
+            padding: 0px 20px 20px 20px;
+        }
+
+        .footer .col h1 {
+            margin: 0;
+            padding: 0;
+            font-family: inherit;
+            font-size: 12px;
+            line-height: 17px;
+            padding: 20px 0px 5px 0px;
+            color: rgb(138, 138, 138);
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+
+        .footer .col ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer .col ul li {
+            color: #999999;
+            font-size: 14px;
+            font-family: inherit;
+            font-weight: bold;
+            padding: 5px 0px 5px 0px;
+        }
+
+        .footer .col ul li:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="logo">
+    <img src="logo.png" alt="logo of the shop" width="100%" height="auto"/>
+</div>
+<nav class="navbar">
+    <a href='home.html'>Home</a>
+    <a href='about.html'>About Us</a>
+    <a href='menu.html'>Menu</a>
+    <a href='orderonline.html'>Order Online</a>
+    <a href='contact.html'>Contact Us</a>
+    <a href='ourstaff.html'>Our Staff</a>
+    <a href='gallery.html'>Gallery</a>
+    <a href='reviews.html'>Reviews</a>
+    <a href='events.html'>Events</a>
+    <a href='sustainability.html'>Sustainability</a>
+</nav>
+<div class="main">
+    <h1 class="menu">Menu</h1>
+    <p class="menu">Here is the menu of our coffee shop :)</p>
+    <img src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_504333530_361153.jpg" alt="Coffee" class="mainimg">
+    <table>
+        <tr>
+            <th>Dessert</th>
+            <th>Price</th>
+            <th>Drinks</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Chocolate Dipped Sesame cookies</td>
+            <td>$20.4</td>
+            <td>The Iced Horchata Latte</td>
+            <td>$22.0</td>
+        </tr>
+        <tr>
+            <td>Cinnamon Crumb Cake</td>
+            <td>$18.5</td>
+            <td>Café Affogato</td>
+            <td>$17.0</td>
+        </tr>
+        <tr>
+            <td>Lemon Ginger Blueberry Muffin</td>
+            <td>$22.2</td>
+            <td>Cappuccino</td>
+            <td>$21.5</td>
+        </tr>
+        <tr>
+            <td>Sweetheart Raspberry Cinnamon Rolls</td>
+            <td>$19.3</td>
+            <td>Espresso</td>
+            <td>$23.0</td>
+        </tr>
+        <tr>
+            <td>Mini Baked Donuts With Vanilla Glaze</td>
+            <td>$24.0</td>
+            <td>Latte</td>
+            <td>$25.0</td>
+        </tr>
+    </table>
+
+    <p>
+        “This is a project of CIS 245, Intermediate Web Publishing Course in UFV, Instructed and requested by Professor Reza Abbasi"
+    </p>
+
+</div>
+<footer class="footer">
+    <div class="contain">
+        <div class="col">
+            <h1>Company</h1>
+            <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <h1>Connect with us</h1>
+            <ul>
+            <li><a href="https://instagram.com">Instagram</a></li>
+            <li><a href="https://facebook.com">Facebook</a></li>
+            <li><a href="https://tumblr.com">Tumblr</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
